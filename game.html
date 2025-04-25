@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Action Games Sales</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff0000, #0000ff);
+            height: 1000px;
+            position: relative;
+
+        }
+        header {
+            background: rgba(255, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        h1 {
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .game {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .game img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .game:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+        }
+        .fire {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background: url('fire.png') no-repeat;
+            background-size: cover;
+            opacity: 0.5;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Action Games Sales</h1>
+    </header>
+    <div class="fire"></div>
+    <div class="container">
+        <div class="game">
+            <img src="https://th.bing.com/th/id/OIP.3V20IPjRtD6ajXCwUIS6zAHaEK?rs=1&pid=ImgDetMain" alt="GTA6">
+            <h2>GTA6</h2>
+            <p>Exciting action game with thrilling gameplay!</p>
+            <button class="download-button2">Download Now</button>
+        </div>
+        <div class="game">
+            <img src="https://th.bing.com/th/id/OIP.HmSV2Tln3OGsC471p8ulvQHaEK?rs=1&pid=ImgDetMain" alt="Dead Cells">
+            <h2>Dead Cells</h2>
+            <p>Join the adventure and conquer your enemies!</p>
+            <button class="download-button2">Download Now</button>
+        </div>
+        <div class="game">
+            <img src="https://th.bing.com/th/id/OIP.BitDpsCgoXa7xKQsQ2v9owHaEK?rs=1&pid=ImgDetMain" alt="Legend Of Zelda:Tears Of The Kingdom">
+            <h2>Legend Of Zelda:Tears Of The Kingdom</h2>
+            <p>Experience the ultimate action-packed journey!</p>
+            <button class="download-button2">Download Now</button>
+            <style>
+       
+        .download-button2 {
+            position: relative;
+            padding: 15px 30px;
+            font-size: 16px;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            background-color: transparent;
+            overflow: hidden;
+            cursor: pointer;
+            transition: color 0.4s;
+            outline: none;
+        }
+        .download-button2::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, #ff007f, #ff7f50);
+            z-index: -1;
+            border-radius: 5px;
+            transition: transform 0.4s;
+            transform: scale(0);
+
+        }
+        .download-button2:hover::before {
+            transform: scale(1);
+        }
+        .download-button2:hover {
+            color: #ff007f;
+        }
+        .download-button2::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            background: linear-gradient(45deg, #ff007f, #ff7f50);
+            z-index: 0;
+            transition: border-color 0.4s;
+        }
+        .download-button2:hover::after {
+            border-color: #ff007f;
+        }
+    </style>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Action Games Sales. All rights reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener('mousemove', (e) => {
+            const fire = document.querySelector('.fire');
+            fire.style.backgroundPosition = `${e.clientX}px ${e.clientY}px`;
+        });
+    </script>
+</body>
+</html>
